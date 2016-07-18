@@ -67,6 +67,19 @@
 			background-color:#008080;
 			cursor:pointer;	
 		}
+		#generate{
+			background-color:#009999;
+			color:white;
+			padding:5px;
+			margin:10px;
+			font-size:14px;
+			border:1px solid gray;
+			border-radius:2px;	
+		}
+		#generate:hover{
+			background-color:#008080;
+			cursor:pointer;	
+		}
 		#home_icon{
 			  width:25px;
 			  height:20px; 
@@ -103,6 +116,8 @@
 				instruct.style.display = 'none';
 			}
 		}
+
+	
 	</script>
   </head>
   <body>
@@ -114,8 +129,18 @@
 	    </div>
   <h1 id="header">Edit Faculty csv file</h1>
   <div class="info">
+		
+		
+		
     <p>To view the current faculty data, download the 'FacultyInformation.csv' file by clicking on the link.</p>
     Download: <a href="FacultyInformation.csv">Current Faculty Information File</a><br>
+	    <p>To view the current committee data, click "Generate" to get the most up-to-date information. Then click the "Current Committee Information File" link.</p>
+	    	  <form action="write_com_csv.cgi" method="post">
+		    	  
+			  <input type="submit" id="generate" name="generate" value="Generate">
+				   {% if updated %} {{updated + "!"}} {% endif %}<a href="CurrentCommitteesStatus.csv"> Committee Information File</a>
+
+		</form>
 	    <p id="instruct_text" onclick="closeInstruct();">Instructions</p>
     <div id="instructions" style="display:none;"><p>
 	    1. If you are from the VPAA office, perform a Banner query for the following information for the faculty body: ACAD_YEAR, NAME_ALPHS, DIV, RANK, NETWORK_USERNAME. <br><br>

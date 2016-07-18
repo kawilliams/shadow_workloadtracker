@@ -48,7 +48,7 @@ def main():
         
         print'''
         <button type="button" onclick="goback()">Go Back</button>
-        <a id="redirect" href="http://mcs3.davidson.edu/how-to/how-to_workloadtracker/edit_faculty.html" hidden>
+        <a id="redirect" href="write_com_csv.cgi" hidden>
         <script>
         function goback(){ document.getElementById('redirect').click(); };
         </script>
@@ -62,7 +62,7 @@ def main():
 
         <body onload="loading()">
         
-        <a id="redirect" href="http://mcs3.davidson.edu/how-to/how-to_workloadtracker/wrong_password.html" hidden>
+        <a id="redirect" href="wrong_password.html" hidden>
         
         
         <script>
@@ -84,7 +84,7 @@ if __name__ == "__main__":
         print '''
         <html>
         <body onload="loading()">
-        <a id="redirect" href="http://mcs3.davidson.edu/how-to/how-to_workloadtracker/error.html" hidden>
+        <a id="redirect" href="error.html" hidden>
         <script>
         function loading(){
            document.getElementById('redirect').click();

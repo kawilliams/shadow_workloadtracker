@@ -318,7 +318,7 @@
       While the Excel sheet did an excellent job of keeping track of the
       information, it was difficult for a user to manipulate. Project PRONTO
       (PRoductive ONline TOols) approached this task with the intent of
-      simplifying the election and record- keeping process, from gathering
+      simplifying the election and record-keeping process, from gathering
       rotating-off positions to updating the list of committee members with the
       results from the elections. <br />
       </p>
@@ -326,17 +326,17 @@
       <table id="all_table">
 	      <tr>
 		      <td>
-      			<div id="search" onclick="document.getElementById('search_text').click();"><a href="http://mcs3.davidson.edu/how-to/how-to_workloadtracker/search_professor.cgi" id="search_text">Search for faculty by name/workload <br><br><span class="text_hidden">Click here to search for faculty members with a certain number of workload points, rank, number of committees, or type.</span></a></div></td>
+      			<div id="search" onclick="document.getElementById('search_text').click();"><a href="search_professor.cgi" id="search_text">Search for faculty by name/workload <br><br><span class="text_hidden">Click here to search for faculty members with a certain number of workload points, rank, number of committees, or type.</span></a></div></td>
       
       			<td>
-	      			<div id="com_info" onclick="document.getElementById('com_info_text').click();"><a href="http://mcs3.davidson.edu/how-to/how-to_workloadtracker/display_com_info.cgi" id="com_info_text">Committee Information<br><br><span class="text_hidden" id="com_info_hidden">Visit this page in order to learn more about the function and composition of each committee.</span></a><br><br></div></td>
+	      			<div id="com_info" onclick="document.getElementById('com_info_text').click();"><a href="display_com_info.cgi" id="com_info_text">Committee Information<br><br><span class="text_hidden" id="com_info_hidden">Visit this page in order to learn more about the function and composition of each committee.</span></a><br><br></div></td>
 		  </tr>
 	  </table>
       </div> <!--End main-->
 
-<p id="gen_descrip">This tool was created by Katy Williams, Hermon Mulat, and Ashley Alexander-Lee in July 2016 as part of Project PRONTO, an initiative undertaken by Dr. Laurie Heyer at Davidson College. Project PRONTO seeks to allow current students to build tools that they think are beneficial to Davidson College and to its community. To see any other projects they have worked on, please visit the <a href="http://mcs3.davidson.edu">Project PRONTO Website</a>.</p>
-<div id="logo_div" onclick="document.getElementById('logo_text').click();"><h1><img style="width: 108px; height: 95px;margin-top:15px;" id="home_logo" alt="Project PRONTO logo" src="prontologo0.png" href="http://mcs3.davidson.edu"></h1>
-    <a id="logo_text" href="http://mcs3.davidson.edu">PRONTO Home</a></div>    
+<p id="gen_descrip">This tool was created by Katy Williams, Hermon Mulat, and Ashley Alexander-Lee in July 2016 as part of Project PRONTO, an initiative undertaken by Dr. Laurie Heyer at Davidson College. Project PRONTO seeks to allow current students to build tools that they think are beneficial to Davidson College and to its community. To see any other projects they have worked on, please visit the <a href="http://pronto.davidson.edu">Project PRONTO Website</a>.</p>
+<div id="logo_div" onclick="document.getElementById('logo_text').click();"><h1><img style="width: 108px; height: 95px;margin-top:15px;" id="home_logo" alt="Project PRONTO logo" src="images/prontologo0.png" href="http://pronto.davidson.edu"></h1>
+    <a id="logo_text" href="http://pronto.davidson.edu">PRONTO Home</a></div>    
     
     
     <p id="admin_tools" onmouseover="navPeek();" onmouseout="navPeekHide();" onclick="showOrHide();">Administrator Tools</p>
@@ -344,17 +344,17 @@
 	    <table id="admin_table">
 		    <tr>
 			    <td>
-	    			<p id="edit_fac" onclick="document.getElementById('edit_fac_text').click();"><a href="http://mcs3.davidson.edu/how-to/how-to_workloadtracker/edit_faculty.html" id="edit_fac_text">Edit Faculty Information<br><br></a><span class="text_hidden admin_descript" id="edit_fac_hidden">Click if you wish to add a CSV from banner updating faculty information. If you wish to replace a current faculty member on a committee, please visit "Find and Fill Upcoming Vacancies".</span><br><span style="color:red;">Administrators Only</span></p></td>
+	    			<p id="edit_fac" onclick="document.getElementById('edit_fac_text').click();"><a href="write_com_csv.cgi" id="edit_fac_text">Edit Faculty Information<br><br></a><span class="text_hidden admin_descript" id="edit_fac_hidden">Click if you wish to add a CSV from banner updating faculty information. If you wish to replace a current faculty member on a committee, please visit "Find and Fill Upcoming Vacancies".</span><br><span style="color:red;">Administrators Only</span></p></td>
 	    		<td>	
-	    			<p id="update_com" onclick="document.getElementById('update_com_text').click();"><a href="http://mcs3.davidson.edu/how-to/how-to_workloadtracker/com_home.cgi" id="update_com_text">Change Committee Structure <br><br><span class="text_hidden admin_descript" id="update_com_hidden">Click if you wish to add a new committee, remove a committee, or change the structure or description of a committee. Committee membership may be handled in "Find and Fill Upcoming Vacancies" and current committee information may be found under "Committee Information."</span><br><span style="color:red;">Administrators Only</span></a></p></td>
+	    			<p id="update_com" onclick="document.getElementById('update_com_text').click();"><a href="com_home.cgi" id="update_com_text">Change Committee Structure <br><br><span class="text_hidden admin_descript" id="update_com_hidden">Click if you wish to add a new committee, remove a committee, or change the structure or description of a committee. Committee membership may be handled in "Find and Fill Upcoming Vacancies" and current committee information may be found under "Committee Information."</span><br><span style="color:red;">Administrators Only</span></a></p></td>
 	    		<td>
-		    		<p id="find_fill_vacancy" onclick="document.getElementById('find_fill_vacancy_text').click();"><a href="http://mcs3.davidson.edu/how-to/how-to_workloadtracker/display_vacancy-1.cgi" id="find_fill_vacancy_text">Find and Fill Upcoming Vacancies<br><br><span class="text_hidden admin_descript" id="find_fill_vacancy_hidden">After election time, visit this page in order to enter election results. This page is also very useful merely to search which members are rotating out of what positions.</span><br><span style="color:red;">Administrators Only</span></a></p></td>
+		    		<p id="find_fill_vacancy" onclick="document.getElementById('find_fill_vacancy_text').click();"><a href="display_vacancy-1.cgi" id="find_fill_vacancy_text">Find and Fill Upcoming Vacancies<br><br><span class="text_hidden admin_descript" id="find_fill_vacancy_hidden">After election time, visit this page in order to enter election results. This page is also very useful merely to search which members are rotating out of what positions.</span><br><span style="color:red;">Administrators Only</span></a></p></td>
 	    	</tr>
 
 	    </table>
 	    
-	    <div id="table-logo" onclick="document.getElementById('logo_text').click();"><h1><img style="width: 108px; height: 95px;margin-top:0px;" alt="Project PRONTO logo" id="admin_logo" src="prontologo0.png" href="mcs3.davidson.edu/newindex.html"></h1>
-    <a id="logo_text" href="http://mcs3.davidson.edu/newindex.html">PRONTO Home</a></div>
+	    <div id="table-logo" onclick="document.getElementById('logo_text').click();"><h1><img style="width: 108px; height: 95px;margin-top:0px;" alt="Project PRONTO logo" id="admin_logo" src="images/prontologo0.png" href="pronto.davidson.edu"></h1>
+    <a id="logo_text" href="pronto.davidson.edu">PRONTO Home</a></div>
 	</div>
 
   </body>

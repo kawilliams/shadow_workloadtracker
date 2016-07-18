@@ -14,7 +14,7 @@ def display_results(query_result):
     templateLoader = jinja2.FileSystemLoader( searchpath="./" )
     templateEnv = jinja2.Environment( loader=templateLoader )
 
-    TEMPLATE_FILE = "vacancy_page.php"
+    TEMPLATE_FILE = "vacancy_page.html"
     
     template = templateEnv.get_template( TEMPLATE_FILE )
     

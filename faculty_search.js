@@ -38,12 +38,12 @@ function sort_table(tbody, col, asc) {
 	});
 	// replace existing rows with new rows created from the sorted array
 	for (i = 0; i < rlen; i++) {
-		var row= ("<td style='width:30%;'>" + arr[i][0] +"</td>" +
-		"<td style='width:15%;'>" + arr[i][1] +"</td>" +
+		var row= ("<td style='width:15%;'>" + arr[i][0] +"</td>" +
+		"<td style='width:10%;'>" + arr[i][1] +"</td>" +
 		"<td style='width:10%;'>" + arr[i][2] +"</td>" +
 		"<td style='width:10%;'>" + arr[i][3] +"</td>" +
-		"<td style='width:35%;'>" + arr[i][4] +"</td>" +
-		"<td style='width:35%;'>" + arr[i][5] +"</td>" )
+		"<td style='width:30%;'>" + arr[i][4] +"</td>" +
+		"<td style='width:25%;'>" + arr[i][5] +"</td>" )
 		
 		rows[i].innerHTML = row;
 	}

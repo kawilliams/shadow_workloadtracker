@@ -7,7 +7,7 @@ cgitb.enable()
 from modelDB import *
 from check import *
 import jinja2
-
+import logging
 # Global variable that will hold the input name of the form we will process
 PASSWORD_INPUT = "password"
 OLD_NAME = "old_name"
@@ -47,9 +47,7 @@ def display_com_home(info,msg):
 
     return outputText
 
-def modify_positions(com,change_info,s):
-    
-    
+def modify_positions(com,change_info,s):  
     
     change_info = change_info.split("%")[:-1]
     
@@ -98,21 +96,27 @@ def main():
     password_form = str(form.getvalue(PASSWORD_INPUT)).strip()
     
     if check_password(password_form):
+
         old_name = form.getvalue(OLD_NAME)
         c_name = form.getvalue(NAME)
         c_chair = form.getvalue(CHAIR)
         c_contact = form.getvalue(CONTACT)
         c_type = form.getvalue(COM_TYPE)
         c_description = form.getvalue(DESCRIPTION)
-        
+
         structure_edit = str(form.getvalue(STRUCTURE_INFO))
+
         
-        
-        # get the committee and make the changes
-    
-        
-        
+        #com_obj = s.query(Committee).all() #.filter(Committee.name==old_name).all()
         com_obj = s.query(Committee).filter(Committee.name==old_name).all()[0]
+        
+        #print '''
+        #<html>
+        #<body>
+        #%s
+        #</body>
+        #</html>
+        #''' % (com_obj)#%s, %s, %s, %s, %s, %s(old_name, c_name, c_chair, c_contact, c_type, c_description)        
         c_id  = com_obj.id
         com_obj.name = c_name
         com_obj.chair = c_chair
@@ -157,7 +161,7 @@ def main():
         print '''
         <html>
         <body onload="loading()">
-        <a id="redirect" href="http://mcs3.davidson.edu/how-to/how-to_workloadtracker/wrong_password.html" hidden>
+        <a id="redirect" href="http://mcs3.davidson.edu/workloadtracker/wrong_password.html" hidden>
         <script>
         function loading(){
            document.getElementById('redirect').click();
@@ -168,19 +172,20 @@ def main():
         '''       
     
 if __name__ == "__main__":
-    try:
-        main()
-    except:
-        log_tb.log()
-        print '''
-        <html>
-        <body onload="loading()">
-        <a id="redirect" href="http://mcs3.davidson.edu/how-to/how-to_workloadtracker/error.html" hidden>
-        <script>
-        function loading(){
-           document.getElementById('redirect').click();
-        }
-        </script>
-        </body>
-        </html>
-        '''          
+    main()
+    #try:
+        #main()
+    #except:
+        #log_tb.log()
+        #print '''
+        #<html>
+        #<body onload="loading()">
+        #<a id="redirect" href="http://mcs3.davidson.edu/workloadtracker/error.html" hidden>
+        #<script>
+        #function loading(){
+           #document.getElementById('redirect').click();
+        #}
+        #</script>
+        #</body>
+        #</html>
+        #'''          

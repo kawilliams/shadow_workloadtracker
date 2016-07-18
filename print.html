@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Print</title>
+
+		
+
+	</head>
+	<body>
+
+			<div id="select_com_div">
+				<p id="select_com">Select a committee: </p>
+				<select id="select_menu">
+					<option>Choose one</option>
+					{% for i in data %}
+					<option>{{i}}</option>
+					{% endfor %}
+				</select>
+			</div>
+			
+		
+
+
+	</body>
+</html>

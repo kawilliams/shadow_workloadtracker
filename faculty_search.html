@@ -15,9 +15,10 @@
         <!--~~~~~~~~~~~~~~~~~ Home ~~~~~~~~~~~~~~~~~~~~-->
         
         <div id="home" onclick="document.getElementById('home_link').click();">
-      		<img src="white_home.png" id="home_icon"/>
-	     	<label id="home_text"><a id="home_link" style="color:white;text-decoration:none;" href="http://mcs3.davidson.edu/how-to/how-to_workloadtracker/home.html">Home</a></label>
-	     	<label id="home_text"><a id="home_link" style="color:white;text-decoration:none;" href="http://mcs3.davidson.edu/how-to">Pronto How-To</a></label>
+      		<img src="images/white_home.png" id="home_icon"/>
+	     	<label id="home_text"><a id="home_link" style="color:white;text-decoration:none;" href="home.html">Home</a></label><br>
+		    <img src="images/prontologo.png" id="home_icon"/>
+	     	<label id="home_text"><a id="home_link" style="color:white;text-decoration:none;" href="http://pronto.davidson.edu/how-to">Pronto How-To</a></label>
 	    </div>
 
 		<!--~~~~~~~~~~~~~~~~~ Retrieve info about faculty... div ~~~~~~~~~~~~~~~~~~~~-->
@@ -113,12 +114,12 @@
 	        <div id="table_header_div">
 	        <table id="table_header" style="width:100%;border-top-right-radius:10px;border-top-left-radius:10px;">
 		        <tr>
-			        <th onclick="sort_table(faculty, 0, asc0); asc0 *= -1;" style="width:25%;">Name<img id="0imgsort" class="arrow" src="-1.png"></th>
-		        	<th onclick="sort_table(faculty, 1, asc1); asc1 *= -1;" style="width:10%;">Rank<img id="1imgsort" class="arrow" src="-1.png"></th>
-		        	<th onclick="sort_table(faculty, 2, asc2); asc2 *= -1;" style="width:5%;">Division<img id="2imgsort" class="arrow" src="-1.png" height="10px" width="10px"></th>
-		        	<th onclick="sort_table(faculty, 3, asc3); asc3 *= -1;" style="width:5%;">Points<img id="3imgsort" class="arrow" src="-1.png" height="10px" width="10px"></th>
-		        	<th onclick="sort_table(faculty, 4, asc4); asc4 *= -1;" style="width:30%;">Current Committees<img id="4imgsort" class="arrow" src="-1.png" height="10px" width="10px"></th>
-			        <th onclick="sort_table(faculty, 5, asc5); asc5 *= -1;" style="width:25%;">Leave Plans<img id="5imgsort" class="arrow" src="-1.png" height="10px" width="10px"></th>
+			        <th onclick="sort_table(faculty, 0, asc0); asc0 *= -1;" style="width:15%;">Name<img id="0imgsort" class="arrow" src="images/-1.png"></th>
+		        	<th onclick="sort_table(faculty, 1, asc1); asc1 *= -1;" style="width:10%;">Rank<img id="1imgsort" class="arrow" src="images/-1.png"></th>
+		        	<th onclick="sort_table(faculty, 2, asc2); asc2 *= -1;" style="width:10%;">Division<img id="2imgsort" class="arrow" src="images/-1.png" height="10px" width="10px"></th>
+		        	<th onclick="sort_table(faculty, 3, asc3); asc3 *= -1;" style="width:10%;">Points<img id="3imgsort" class="arrow" src="images/-1.png" height="10px" width="10px"></th>
+		        	<th onclick="sort_table(faculty, 4, asc4); asc4 *= -1;" style="width:30%;">Current Committees<img id="4imgsort" class="arrow" src="images/-1.png" height="10px" width="10px"></th>
+			        <th onclick="sort_table(faculty, 5, asc5); asc5 *= -1;" style="width:25%;">Leave Plans<img id="5imgsort" class="arrow" src="images/-1.png" height="10px" width="10px"></th>
 				</tr>
 			</table>
 		</div> <!--End "table_header_div"-->
@@ -128,10 +129,10 @@
 			    <tbody id="result_table_body" >
 		       	{% for j in data %}
 		        	<tr>
-			        	<td style="width:25%;">{{j[0]}}</td>
+			        	<td style="width:15%;">{{j[0]}}</td>
 			        	<td style="width:10%;">{{j[1]}}</td>
-			        	<td style="width:5%;">{{j[2]}}</td>
-			        	<td style="width:5%;">{{j[3]}}</td>
+			        	<td style="width:10%;">{{j[2]}}</td>
+			        	<td style="width:10%;">{{j[3]}}</td>
 			        	<td style="width:30%;">
 				        {% for val in j[5] %}
 				        	- {{val}}<br>

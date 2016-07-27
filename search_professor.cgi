@@ -17,7 +17,7 @@ FULL_NAME = "FacultyFullName"
 LEAVE_INFO = "leave_info"
 
 
-def deplay_results(query_result, pass_back_rank, pass_back_div, pass_back_no_com, 
+def display_results(query_result, pass_back_rank, pass_back_div, pass_back_no_com, 
                    pass_back_no_load_pt, pass_back_leaveinfo):
     # we need an environment and file loding system to load file and
     # work with the templating engine
@@ -192,11 +192,15 @@ def main():
             
         results = name_search(full_name)
         
+    elif form.getvalue("subchange") == "Reset":
+        session = Session()
+        results = session.query(Faculty).all()
+        
     else:
         results = name_search("")
         
     query_result = format_faculty(results)
-    output_html = deplay_results(query_result, pass_back_rank, pass_back_div, pass_back_no_com, pass_back_no_load_pt, pass_back_leaveinfo)
+    output_html = display_results(query_result, pass_back_rank, pass_back_div, pass_back_no_com, pass_back_no_load_pt, pass_back_leaveinfo)
     print output_html
 
 

@@ -130,13 +130,3 @@ function formatQuery(){
 }
 
 
-/*********** Uncheck all Checkboxes ******************/
-
-function clearAll(){
-	var checkboxes = document.getElementsByClassName("checkbox");
-	for (var i = 0; i < checkboxes.length; i++){
-		checkboxes[i].checked = false;	
-		document.getElementById(checkboxes[i].id + "_label").style.color = "black";
-	}	
-	document.getElementById('incl_plans').checked = true;
-}
